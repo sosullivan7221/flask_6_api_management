@@ -42,8 +42,9 @@ Resource Group: az group create --name (ResourceGroupName) --location (Region)
 Storage Account: az storage account create --name (StorageAccountName) --location (Region) --resource-group (ResourceGroupName) --sku Standard_LRS
 Azure Function App: az functionapp create --resource-group (ResourceGroupName) --consumption-plan-location (region) --runtime python --runtime-version 3.9 --functions-version 4 --name (AppName) --os-type linux --storage-account (StorageAccountName)
 
-6. Deploy the app using: func azure functionapp publish (AppName)
-7. Use the provided link to access your application. The link is shareable! The link to my application is: https://seanapphha504.azurewebsites.net/api/hello
+6. In your local.settings.json file, replace the "AzureWebJobsStorage" value with the connection string value for your storage account.
+7. Deploy the app using: func azure functionapp publish (AppName)
+8. Use the provided link to access your application. The link is shareable! The link to my application is: https://seanapphha504.azurewebsites.net/api/hello
 
 ## Issues
 
