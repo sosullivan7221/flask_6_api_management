@@ -27,14 +27,14 @@ Flasgger is the package that will allow you to generate a user-friendly interfac
 2. Create a local function in your repository using: func init LocalFunctionProj --python -m V2.  This will create a folder containing a number of files, including a .py file to run your app.
 3. Insert your desired functions into the function_app.py file provided in the folder. The syntax is similar to Flask but not the same, so you cannot directly copy/paste your code from Flask. Here is an example of what the syntax should look like:
 
-``import azure.functions as func
+import azure.functions as func
 
 app = func.FunctionApp()
 
 @app.function_name(name="HttpExample")
 @app.route(route="hello")
 def test_function(req: func.HttpRequest) -> func.HttpResponse:
-    return func.HttpResponse("HttpExample function processed a request!")``
+    return func.HttpResponse("HttpExample function processed a request!")
 
 4. Run your function locally using: func start. This should bring you to an endpoint where Azure will verify that the app is running, and you can test the API requests using the endpoints and variables designated in your function.
 5.  Create a resource group, storage account, and Azure Function App to host the app. These can be done in Azure directly or using Azure CLI. If using Azure CLI, use the following commands:
